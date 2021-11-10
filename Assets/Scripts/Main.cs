@@ -57,7 +57,7 @@ public class Main : MonoBehaviour
                     Vector2 pos = hit.transform.gameObject.GetComponent<Tile>().pos;
                     Debug.Log("Hit " + hit.transform.gameObject.GetComponent<Tile>().pos);
                     GameObject newBall = Instantiate(ball);
-                    newBall.transform.position = hit.transform.position + new Vector3(0.4F, 0.4F, 0);
+                    newBall.transform.position = hit.transform.position + new Vector3(0.2F, 0.4F, 0);
                     newBall.SetActive(true);
                     balls[(int)pos.x, (int)pos.y].Add(newBall);
                 }

@@ -15,9 +15,11 @@ public class TileGenerator : MonoBehaviour
             for (int y = 0; y < Tiles.GetLength(1); y++)
             {
                 Tiles[x, y] = Instantiate(SampleTile);
-                Tiles[x, y].GetComponent<Tile>().pos = new Vector2(x,y);
+                Tiles[x, y].GetComponent<Tile>().pos = new Vector2(x, y);
                 Tiles[x, y].SetActive(true);
-                Tiles[x, y].transform.position = new Vector3(x, 0, y);
+                Tiles[x, y].transform.position = new Vector3(x - Tiles.GetLength(0)/2 + 0.5F,
+                    0,
+                    y - Tiles.GetLength(1)/2 + 0.5F);
             }
         }
     }
